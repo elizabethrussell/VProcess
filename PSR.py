@@ -1,4 +1,5 @@
 import math
+from itertools import permutations
 
 L = 4.0 #ratio of HR/LR pixels
 
@@ -40,10 +41,14 @@ def xPrime(Y, pix, h, v, width, height):
 	locX = math.round(x*L + h)
 	locY = math.round(y*L + v)
 
+	"""
 	xPrime = 0
 	for i in range(-L, L):
 		for j in range(-L, L):
 			xPrime += Y[(x*L+i) + (y*L+j)*WIDTH*L]*W(i,j)
+	"""
+	xPrime = sum([Y[(x*L+i) + (y*L+j)*WIDTH*L]*W(i,j) for (i, j) in permutations(range(-L,L),2)])
+
 
 	return xPrime
 
