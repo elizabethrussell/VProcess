@@ -2,8 +2,8 @@ import math
 
 L = 5.0 #ratio of HR/LR pixels
 
-WIDTH = 1000 #todo
-HEIGHT = 1000 #todo
+WIDTH = 2592
+HEIGHT = 1944
 
 mu = 0
 sigma = L/5
