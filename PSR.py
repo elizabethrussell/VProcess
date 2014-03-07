@@ -1,7 +1,9 @@
+import math
+
 L = 5.0 #ratio of HR/LR pixels
 
-WIDTH = #todo
-HEIGHT = #todo
+WIDTH = 1000 #todo
+HEIGHT = 1000 #todo
 
 mu = 0
 sigma = L/5
@@ -15,8 +17,8 @@ alpha = 1
 Returns the Gaussian weight centered about 0 of i, j
 """
 def W(i, j):
-	first = gaussian_first_part * math.exp(((i-mu)**2))*gauss_exp_denom)
-	second = gaussian_first_part * math.exp(((j-mu)**2))*gauss_exp_denom)
+	first = gaussian_first_part * math.exp(((i-mu)**2))*gauss_exp_denom
+	second = gaussian_first_part * math.exp(((j-mu)**2))*gauss_exp_denom
 	return first*second
 
 
