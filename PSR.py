@@ -1,22 +1,24 @@
 import math
 
-L = 5.0 #ratio of HR/LR pixels
+L = 4.0 #ratio of HR/LR pixels
 
 WIDTH = 2592
 HEIGHT = 1944
 
+
+"""
+Constants for W. Presently Gaussian constants for approximation.
+"""
 mu = 0
 sigma = L/5
 sigma_squared = sigma*sigma
 gauss_exp_denom = -1/(sigma_squared*2)
 gaussian_first_part = 1/(sigma * math.sqrt(2*math.pi))
 
-alpha = 1
-
-"""
-Returns the Gaussian weight centered about 0 of i, j
-"""
 def W(i, j):
+	"""
+	Returns the Gaussian weight centered about 0 of i, j
+	"""
 	first = gaussian_first_part * math.exp(((i-mu)**2))*gauss_exp_denom
 	second = gaussian_first_part * math.exp(((j-mu)**2))*gauss_exp_denom
 	return first*second
@@ -45,6 +47,8 @@ def xPrime(Y, pix, h, v, width, height):
 
 	return xPrime
 
+
+alpha = 1.0
 def cost(Y, X, H, V, M):
 	"""
 	Cost function for a given Y, with other data
