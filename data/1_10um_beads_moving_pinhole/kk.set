@@ -1,0 +1,24 @@
+[Image Control]
+CurrentMode=0
+RowSize=2592
+ColSize=1944
+Resolution=11
+BinMode=1
+SkipMode=0
+ExposureTime=100
+FrameTime=10
+AutoExposure=0
+XStart=0
+YStart=0
+RedGain=8
+GreenGain=45
+BlueGain=8
+RedRatio=100
+BlueRatio=100
+[Frame Grab]
+Count=1000
+File Path=C:\Users\Elizabeth\Desktop\Pics\Second Experiment day\Slide_No_slide\.25 1_10 beads moving pinhole
+File Name=200micronap69.4mm
+Ignore Skip Mode=0
+Save As JPEG=1
+Append Data&Time=0
