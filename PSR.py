@@ -15,7 +15,7 @@ HR = [0] * (HR_DIM[0] * HR_DIM[1])
 LR = []
 for i in range(L):
 	for j in range(L):
-		filename = "imgs/{0}-{1}.png".format(i,j)
+		filename = "imgs/{0}-{1}.bmp".format(i,j)
 		print "Opening " + filename
 		img = Image.open(filename)
 		in_pixels = img.getdata()
@@ -42,4 +42,4 @@ for i in range(L):
 
 outimg = Image.new('L', HR_DIM)
 outimg.putdata(HR)
-outimg.save("HR{0}.png".format("-gaussian" if gaussian else ""))
+outimg.save("HR{0}.bmp".format("-gaussian" if gaussian else ""))
